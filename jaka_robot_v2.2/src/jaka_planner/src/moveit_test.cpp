@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     //  MoveIt uses a JointModelGroup to store the joints of the robot arm, called PLANNING_GROUP. 
     // The "planning group" and the "joint model group" can be used interchangeably throughout the movement.
     // The official configuration file defines it as two move_groups: {manipulator, endeffector}
-    static const std::string PLANNING_GROUP = "jaka_zu3";
+    static const std::string PLANNING_GROUP = "jaka_zu18";
     // By creating an instance of the planning_interface:`MoveGroupInterface` class, you can easily connect, control, or plan a planning group
     moveit::planning_interface::MoveGroupInterface move_group(PLANNING_GROUP);
     // Add or remove obstacles in the virtual world by using the planning_scene_interface: `PlanningSceneInterface` class
