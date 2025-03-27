@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="hugmi">
+  <!--Load the macro for creating a robot-->
+  <xacro:include filename="$(find jaka_description)/urdf/jaka_zu5.urdf"/>
+  <xacro:include filename="$(find jaka_description)/urdf/jaka_zu5.urdf"/>
+
+  <!--Instanciate the robots-->
+  <xacro:left_zu5_robot prefix="left_" kinematics_parameters_file="$(arg left_kinematics)"/>
+  <xacro:right_zu5_robot prefix="right_" kinematics_parameters_file="$(arg right_kinematics)" />
+
+  <!--common link where the tf tree originates from-->
+  <link name="world"/>
+
+  <!--Define the robot poses in the world-->
+  <joint name="world_to_left" type="fixed">
+    <parent link="world" />
+    <child link = "left_base_link" />
+    <origin xyz="-0.5 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="world_to_right" type="fixed">
+    <parent link="world" />
+    <child link = "right_base_link" />
+    <origin xyz="0.5 0 0" rpy="0 0 0" />
+  </joint>
+</robot>

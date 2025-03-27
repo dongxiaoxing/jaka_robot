@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: jaka_description
+    relative_path: urdf/jaka_s5.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/S 5.srdf
+  CONFIG:
+    author_name: Dong Xiaoxing
+    author_email: dongxxi@schaeffler.com
+    generated_timestamp: 1743041205
